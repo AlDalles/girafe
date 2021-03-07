@@ -22,10 +22,10 @@ class AdvertFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->unique()->sentence(rand(3, 5)),
-            'description' => implode(". ", $this->faker->paragraphs(rand(6, 14))),
-            'image_patch' => $this->faker->image('public/images', 400, 300),
-            'created_at' => $this->faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = null)
+            'title' => $this->faker->unique()->sentence(rand(3,5)),
+            'description'=>implode(". ", $this->faker->paragraphs(rand(6,14))),
+            'image_patch'=> $this->faker->image('public/images',400,300),
+            'created_at'=>$this->faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = null)
         ];
     }
 }
