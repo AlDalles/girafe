@@ -33,7 +33,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/', [\App\Http\Controllers\AdvertController::class, 'store'])->name('store');
     Route::get('/edit', [\App\Http\Controllers\AdvertController::class, 'create'])->name('create');
     Route::put('/edit/{advert}', [\App\Http\Controllers\AdvertController::class, 'update'])->name('update');
-    Route::delete('/{advert}', [\App\Http\Controllers\AdvertController::class, 'destroy'])->name('destroy');
+    Route::delete('/delete/{advert}', [\App\Http\Controllers\AdvertController::class, 'destroy'])->name('destroy');
     Route::get('/edit/{advert}', [\App\Http\Controllers\AdvertController::class, 'edit'])->name('edit');
     Route::get('/user/{user}', [\App\Http\Controllers\AdvertController::class, 'searchByUser'])->name('searchByUser');
     Route::get('/logout', [\App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
