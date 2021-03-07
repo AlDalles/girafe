@@ -10,5 +10,6 @@
    @include('pages.advert.show',['advert'=>$advert])
 @endforeach
 
+
 @include('paginator',['pages'=>$adverts])
 @endsection
