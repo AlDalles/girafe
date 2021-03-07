@@ -20,7 +20,7 @@
             @endcan
         </div>
         <div class="main__ad__author">
-            <a href="#" class="main__ad__author__title">{{$advert->user->name}}</a>
+            <a href="{{route('searchByUser',$advert->user->id)}}" class="main__ad__author__title">{{$advert->user->name}}</a>
             @can('update',$advert)<form action="{{route('edit',$advert)}}" class="main__ad__title__form">
                 <input type="submit"  class="main__ad__title__delete" value="edit">
             </form>

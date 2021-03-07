@@ -48,7 +48,7 @@
         @auth()
             <div class="button__nav">
                 <div class="user__name user__inner">
-                    <p class="user__name__inner">{{Auth::user()->name}}</p>
+                    <p class="user__name__inner"><a href="{{route('searchByUser',Auth::user()->id)}}">{{Auth::user()->name}}</a></p>
                 </div>
                 <div class="create user__inner">
                     <a href="{{route('create')}}" class="create__link create__link__bg">Create Ad</a>
