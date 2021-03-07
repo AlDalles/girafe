@@ -9,19 +9,21 @@ use Illuminate\Notifications\Notifiable;
 
 class Advert extends Model
 {
-    use HasFactory, Notifiable,SoftDeletes;
+    use HasFactory, Notifiable, SoftDeletes;
+
     protected $dates = ['deleted_at'];
     protected $fillable = [
         'title',
-        'body',
+        'description',
+        'user_id',
+        'image_patch'
 
     ];
 
-public function users()
-{
-    return $this->belongsTo(User::class);
-}
-
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
 
 }

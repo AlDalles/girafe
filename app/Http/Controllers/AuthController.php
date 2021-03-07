@@ -15,7 +15,7 @@ class AuthController extends Controller
     public function login()
     {
 
-        return view('pages.auth.login');
+        return redirect(route('index'));
 
 
     }
@@ -23,8 +23,8 @@ class AuthController extends Controller
 
     public function loginHandle(Request $request)
     {
-        $credentials = $request->only('email', 'password');
 
+        $credentials = $request->only('name', 'password');
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
@@ -38,22 +38,47 @@ class AuthController extends Controller
             }
 
             return new RedirectResponse(route('index'));
+
+
+        }
+
+        if (User::where('name', '=', $request['name'])->get()->count() == 0 && $request['password'] != null) {
+
+            $data = $request->validate([
+
+                'name' => ['required', 'min:10', 'unique:users,name'],
+                'password' => ['required', 'min:8'],
+
+
+            ]);
+            $user = new User;
+            $user->name = $data['name'];
+            $user->password = Hash::make($request['password']);
+            $user->save();
+
+
+            $credentials = $request->only('name', 'password');
+            if (Auth::attempt($credentials)) {
+                $request->session()->regenerate();
+                return new RedirectResponse(route('index'));
+            }
         }
 
         return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
+            'name' => 'The provided credentials do not match our records.',
         ]);
     }
 
     public function logout(Request $request)
     {
+
         Auth::logout();
 
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
 
-        return redirect('index');
+        return redirect()->route('index');
     }
 
 }

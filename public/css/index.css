@@ -1,0 +1,297 @@
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("../fonts/Roboto-Medium.eot"), url("../fonts/Roboto-Medium.woff2"), url("../fonts/Roboto-Medium.woff"), url("../fonts/Roboto-Medium.ttf"), url("../fonts/Roboto-Medium.svg");
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto-Regular.eot"), url("../fonts/Roboto-Regular.woff2"), url("../fonts/Roboto-Regular.woff"), url("../fonts/Roboto-Regular.ttf"), url("../fonts/Roboto-Regular.svg");
+}
+
+/* line 10, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 14, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+body {
+  background-color: #b4b4b4;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* line 18, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.conteiner {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 2rem 3rem 0 3rem;
+  background-color: white;
+}
+
+.conteiner__create {
+  padding: 2rem 0;
+  position: relative;
+  top: 7%;
+}
+/* line 25, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto-Regular";
+}
+
+/* line 31, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.log-in {
+  display: flex;
+}
+
+/* line 33, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.log-in__title {
+  margin: 0;
+  background-color: #00aedb;
+  color: white;
+  padding: 5px;
+}
+
+/* line 40, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.style-all {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+/* line 43, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.style-all:last-child {
+  margin: 0;
+}
+
+/* line 47, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.title {
+  display: flex;
+  color: white;
+  font-family: "Roboto-Medium";
+  font-size: 24px;
+}
+
+/* line 53, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.one {
+  background-color: #00aedb;
+  padding: 5px;
+}
+
+/* line 57, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.two {
+  background-color: #b5da06;
+  padding: 5px;
+}
+
+/* line 62, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.create__link {
+  text-decoration: none;
+  background-color: #00aedb;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+}
+
+.button_log {
+  border: none;
+  background-color: #b5da06;
+  color: #ffffff;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+/* line 69, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.main {
+  font-family: "Roboto-Medium";
+  max-width: 850px;
+  margin: 0 auto;
+  margin: 3rem 0 0 0;
+  position: relative;
+  padding-bottom: 2rem;
+}
+.main::after {
+  display: block;
+  content: '';
+  border-bottom: 1px solid #00000036;
+  padding-bottom: 2rem;
+}
+/* line 76, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.main__ad__description {
+  font-family: "Roboto-Regular";
+  height: 3.3em; 
+  overflow: hidden;
+}
+
+.main__ad__description-item {
+  overflow: visible;
+  height: 100%;
+  padding-bottom: 5%;
+}
+/* line 79, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.main__ad__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 83, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.main__ad__title__inner {
+  font-family: "Roboto-Medium";
+  margin: 0;
+  text-decoration: none;
+  font-size: 32px;
+  color: black;
+}
+
+/* line 90, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.main__ad__title__delete, .main__ad__title__edit {
+  height: 24px;
+  padding: 0 8px;
+  background-color: #00aedb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* line 100, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.main__ad__author {
+  margin: 0 0 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 105, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.main__ad__author__title {
+  text-decoration: none;
+  color: #00aedb;
+}
+
+/* line 110, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.main__ad__datatime {
+  color: white;
+  position: absolute;
+  top: 1rem;
+  left: -135px;
+}
+
+/* line 115, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.main__ad__datatime__data {
+  background-color: #f78f1d;
+  padding: 3px;
+}
+
+/* line 119, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.main__ad__datatime__time {
+  background-color: #00aedb;
+  padding: 3px;
+}
+
+/* line 127, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.form__create {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  margin: 0 auto;
+  font-family: "Roboto-Medium";
+}
+
+/* line 133, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.form__create__title {
+  text-align: center;
+  background-color: #00aedb;
+  color: white;
+  padding: 10px 0;
+}
+
+/* line 140, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.create__ad {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+/* line 144, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.create__ad__title {
+  margin-bottom: 1rem;
+}
+
+/* line 147, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.create__ad__input {
+  padding: 10px 5px;
+  margin-bottom: 3rem;
+}
+
+/* line 151, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.create__ad__description {
+  margin-bottom: 1rem;
+}
+
+/* line 154, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.create__ad__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+/* line 158, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+.create__ad__button__submit {
+  padding: 10px 15px;
+  background-color: #f78f1d;
+  border: none;
+  color: white;
+}
+
+/* line 166, C:/Users/Liubov/Desktop/blogtwo/scss/index.scss */
+#description {
+  padding: 10px 5px;
+}
+
+.warning {
+  background-color: red;
+  color: #ffffff;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+/*# sourceMappingURL=index.css.map */
+.main__ad__image {
+  height: 100%;
+  box-sizing: border-box;
+}
+.main__ad__image__inner {
+  width: 100%;
+}
+.timeago {
+  color: rgba(70, 70, 70, 0.5);
+  font-size: 12px;
+  margin: 0 0 1rem 0;
+  font-family: "Roboto-Regular";
+}
+.main__ad__author {
+  margin: 0;
+}
+
+.user__name {
+  background-color: #b7da065d;
+}
+.user__name__inner {
+  padding: 10px 15px;
+  color: #000000;
+
+}
+
+.button__nav {
+  display: flex;
+  align-items: center;
+}
+.user__inner {
+  margin-right: 5px;
+}
+.user__inner:last-child {
+  margin: 0;
+}
+.create__link__bg {
+  background-color: #b5da06;
+}
