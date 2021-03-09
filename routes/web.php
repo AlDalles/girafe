@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
-    return view('index');
-});*/
+
 
 Route::middleware('guest')->group(function () {
 
@@ -40,8 +38,7 @@ Route::middleware('auth')->group(function () {
 
 });
 
-//Route::get('/',[\App\Http\Controllers\AdvertController::class,'index']);
-//Route::resource('advert',\App\Http\Controllers\AdvertController::class);
+Route::resource('/', \App\Http\Controllers\AdvertController::class);
 
 
 
