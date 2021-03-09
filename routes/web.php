@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
 Route::middleware('guest')->group(function () {
 
     Route::get('/{advert}', [\App\Http\Controllers\AdvertController::class, 'show'])->where('advert', '[0-9]+')->name('show');

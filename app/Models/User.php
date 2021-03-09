@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -37,12 +36,13 @@ class User extends Authenticatable
      *
      * @var array
      */
-   /* protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];*/
-public function adverts(){
+    /* protected $casts = [
+         'email_verified_at' => 'datetime',
+     ];*/
+    public function adverts()
+    {
 
-    return $this->hasMany(Advert::class);
-}
+        return $this->hasMany(Advert::class);
+    }
 
 }

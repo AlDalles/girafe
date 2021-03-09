@@ -6,10 +6,10 @@
 @endpush
 
 @section('content')
-@foreach($adverts as $advert)
-   @include('pages.advert.show',['advert'=>$advert])
-@endforeach
+    @foreach($adverts as $advert)
+        @include('pages.advert.show',['advert'=>$advert])
+    @endforeach
 
 
-@include('paginator',['pages'=>$adverts])
+    @include('paginator',['pages'=>$adverts])
 @endsection

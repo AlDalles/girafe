@@ -24,25 +24,25 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($name,$password)
+    public function create($name, $password)
     {
 
-        return view('user.create',compact('name','password'));
+        return view('user.create', compact('name', 'password'));
 
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $data=$request->validate([
+        $data = $request->validate([
 
-            'name' =>['required','min:10','unique:users,name'],
-            'password' =>['required','min:8'],
+            'name' => ['required', 'min:10', 'unique:users,name'],
+            'password' => ['required', 'min:8'],
 
 
         ]);
@@ -58,7 +58,7 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -69,7 +69,7 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -80,8 +80,8 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -92,7 +92,7 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
